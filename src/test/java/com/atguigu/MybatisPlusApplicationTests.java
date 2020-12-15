@@ -78,7 +78,7 @@ class MybatisPlusApplicationTests {
     //插入
     @Test
     void insert() {
-        User user = new User(null, "张si", 19, "san@333.com", null, null);
+        User user = new User(null, "张si", 19, "san@333.com", null, null,null);
         int i = userMapper.insert(user);
         System.out.println(i > 0 ? "加入成功" : "添加失败");
     }
@@ -97,12 +97,12 @@ class MybatisPlusApplicationTests {
     //更新
     @Test
     void update() {
-        userMapper.updateById(new User(3l, "tomcat", null, null, null, null));
+        userMapper.updateById(new User(3l, "tomcat", null, null, null, null,null));
     }
 
     @Test
     void update1() {
-        userMapper.updateById(new User(3l, "tomcat", null, null, null, null));
+        userMapper.updateById(new User(3l, "tomcat", null, null, null, null,null));
     }
 
     //测试乐观锁
@@ -133,5 +133,12 @@ class MybatisPlusApplicationTests {
         System.out.println(productMapper.selectById(1));
     }
     //删除
+    @Test
+    void delete(){
+        int i = userMapper.deleteById(1);
+        if(i > 1){
+            System.out.println("删除成功");
+        }
+    }
 
 }

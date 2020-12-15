@@ -1,9 +1,6 @@
 package com.atguigu.entity;
 
-import com.baomidou.mybatisplus.annotation.FieldFill;
-import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableField;
-import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.*;
 import lombok.*;
 
 import java.util.Date;
@@ -32,4 +29,7 @@ public class User {
     private Date gmtCreate;
     @TableField(fill = FieldFill.INSERT_UPDATE) //当添加和更新的的时候自动填充
     private Date gmtModified;
+
+    @TableLogic //标识数据库的该字段为逻辑删除 0为未删除 1为已删除
+    private Boolean deleted;
 }

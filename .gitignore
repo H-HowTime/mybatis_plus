@@ -1,4 +1,4 @@
-HELP.md
+```````````  HELP.md
 target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
@@ -20,7 +20,7 @@ target/
 *.ipr
 
 ### NetBeans ###
-/nbproject/private/
+/nbproject/pr4++++++++++++++++++++++++++++++++++++++++++ivate/
 /nbbuild/
 /dist/
 /nbdist/
@@ -31,3 +31,8 @@ build/
 
 ### VS Code ###
 .vscode/
+!/.gitignore
+!/mvnw.cmd
+!/mvnw
+!/.mvn/
+
